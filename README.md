@@ -17,9 +17,9 @@ copiar el resultado y editar el docker-compose.yaml en la opcion  **APP_KEY=**
 docker compose up -d
 ```
 
-Modifica si es necesario el docker-compose.yaml  APP_URL= Ya Sea
+Modifica si es necesario el docker-compose.yaml  **APP_URL=**  Ya Sea
 
-APP_URL=http://localhost:8920  ó https://tudominio.com ó http://IP:8920
+**APP_URL=** http://localhost:8920  ó https://tudominio.com ó http://IP:8920
 
 Ver en "localhost:8920" ó "IP:8920"
 

@@ -1,0 +1,29 @@
+services:
+
+  bookstack:
+    image: solidnerd/bookstack:latest
+    depends_on:
+      - mariadb
+    environment:
+      - DB_HOST=mariadb:3306
+      - DB_DATABASE=bookstack
+      - DB_USERNAME=bookstack
+      - DB_PASSWORD=secret
+      - APP_URL=http://localhost:8920   # http://IP:8920
+      - APP_KEY=  # hay que generarlo 
+    volumes:
+      - ./uploads:/var/www/bookstack/public/uploads
+      - ./storage-uploads:/var/www/bookstack/storage/uploads
+    ports:
+      - "8920:8080" 
+    #Datos de abajo cambiar si no es de pruebas
+  mariadb:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=bookstack
+      - MYSQL_USER=bookstack
+      - MYSQL_PASSWORD=secret
+    volumes:
+      - ./mariadb-data:/var/lib/mysql
+      

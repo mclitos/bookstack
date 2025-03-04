@@ -7,6 +7,12 @@ git clone https://github.com/mclitos/bookstack
 ```
 cd bookstack
 ```
+### Hay que generar una  APP_KEY= 
+```
+docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
+```
+copiar el resultado y editar el docker-compose.yaml en la opcion  **APP_KEY=**
+
 ```
 docker compose up -d
 ```

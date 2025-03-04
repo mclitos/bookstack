@@ -15,7 +15,7 @@ services:
       - ./uploads:/var/www/bookstack/public/uploads
       - ./storage-uploads:/var/www/bookstack/storage/uploads
     ports:
-      - "8920:8080" 
+      - "8920:8080"
     #Datos de abajo cambiar si no es de pruebas
   mariadb:
     image: mariadb
@@ -26,4 +26,3 @@ services:
       - MYSQL_PASSWORD=secret
     volumes:
       - ./mariadb-data:/var/lib/mysql
-      

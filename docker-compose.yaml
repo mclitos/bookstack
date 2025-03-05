@@ -16,7 +16,6 @@ services:
       - ./storage-uploads:/var/www/bookstack/storage/uploads
     ports:
       - "8920:8080"
-    #Datos de abajo cambiar si no es de pruebas
   mariadb:
     image: mariadb
     environment:
